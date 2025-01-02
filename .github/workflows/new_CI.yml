@@ -1,0 +1,30 @@
+name: Test Multiple Python Versions
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["pypy3.10", "3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          make install
+      - name: Lint with pylint
+        run: |
+          make lint
+      - name: Test with pytest
+        run: |
+          make test
+      - name: Format code
+        run: |
+          make format
