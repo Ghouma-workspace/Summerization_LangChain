@@ -9,6 +9,6 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C summarization_inference.py summarization_lib.py test_summarization_inference.py test_summarization_lib.py
+	pylint --disable=R,C summarization_inference.py summarization_lib.py tests
 
 all: install lint test format
