@@ -1,4 +1,4 @@
-from ../summarization_lib import (
+from summarization_lib import (
     initialize_cohere_model,
     split_text_into_chunks,
     create_documents_from_chunks,

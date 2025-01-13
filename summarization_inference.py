@@ -1,5 +1,3 @@
-# summarization_inference.py
-
 import sys
 from summarization_lib import (
     initialize_cohere_model,

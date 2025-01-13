@@ -1,6 +1,9 @@
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -e .
+
+inference-streamlit:
+	streamlit run stream-chat/app.py
 
 test:
 	python -m pytest -vv --cov=summarization_inference --cov=summarization_lib tests
@@ -15,6 +18,6 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C summarization_inference.py summarization_lib.py tests
+	pylint --disable=R,C summarization_inference.py tests summarization_lib
 
 all: install lint test format

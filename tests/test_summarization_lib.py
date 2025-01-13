@@ -14,7 +14,7 @@ from langchain.docstore.document import Document
 
 class TestSummarizationLib(unittest.TestCase):
 
-    @patch("summarization_lib.Cohere")
+    @patch("summarization_lib.core.Cohere")
     def test_initialize_cohere_model(self, mock_cohere):
         api_key = "test_api_key"
         model_name = "test_model"
@@ -50,7 +50,7 @@ class TestSummarizationLib(unittest.TestCase):
         self.assertIn("CONCISE SUMMARY:", prompt.template)
         self.assertIn("text", prompt.input_variables)
 
-    @patch("summarization_lib.load_summarize_chain")
+    @patch("summarization_lib.core.load_summarize_chain")
     def test_create_summarization_chain(self, mock_load_summarize_chain):
         llm = MagicMock()
         custom_prompt = MagicMock()

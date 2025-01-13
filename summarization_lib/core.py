@@ -1,5 +1,3 @@
-# summarization_lib.py
-
 import os
 from langchain_community.llms import Cohere  # pylint: disable=E0611
 from langchain.chains import load_summarize_chain  # pylint: disable=E0611
