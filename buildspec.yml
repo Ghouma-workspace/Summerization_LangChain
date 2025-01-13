@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - echo "Installing dependencies..."
+      - make install
+
+  pre_build:
+    commands:
+      - echo "Running pre-build steps..."
+      - make lint
+      - make format
+
+  build:
+    commands:
+      - echo "Running build steps..."
+      - make test
+
+  post_build:
+    commands:
+      - echo "Post-build steps completed successfully."
+      - echo "Build process complete!"
+  
+  artifacts:
+  files:
+    - "**/*"
+    - "dist/*.zip"
+  discard-paths: no
+  base-directory: build_output
