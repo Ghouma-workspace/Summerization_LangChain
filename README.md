@@ -1,7 +1,7 @@
 [![Python application test with Github Actions](https://github.com/Ghouma-workspace/Summerization_LangChain/actions/workflows/new_CI.yml/badge.svg)](https://github.com/Ghouma-workspace/Summerization_LangChain/actions/workflows/CI-testing.yml)
 [![AWS CodeBuild](https://codebuild.eu-west-3.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiMUlRMUFVMDNwUFVTNHhFcjhBUk1SL1hZSXcyNWw3NXo0eHgyMkJ6dFpZYVIzK0NDL0c3VXVHUXBVTDJlTkY3VWV5ZDhsVys3Q0tGMlFBV1RWR1RTQkxRPSIsIml2UGFyYW1ldGVyU3BlYyI6ImJETk9rM3krcnR6ZHk5M1EiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)]
 
-# Summarization LangChain Project
+# Summarization using LangChain
 
 A Python-based project for text summarization using Cohere and LangChain.  
 This project includes a **Streamlit web app** for summarization and provides a modular library for inference.  
