@@ -25,10 +25,12 @@ SUMMARIZATION_LANGCHAIN
 │   ├── summarization_inference.py # Inference logic  
 ├── tests/  
 │   ├── test_summarization_inference.py  # Test suite for inference  
-│   ├── other_test_files.py             # Additional test files (if applicable)  
+│   ├── test_summarization_lib.py        # Test suite for summarization package  
 ├── Makefile                        # Automation of common tasks  
+├── buildspec.yml                   # Set up AWS CodeBuild  
 ├── requirements.txt                # Python dependencies  
 ├── setup.py                        # Package setup file  
+└── summarization_inference.py      # On terminal inference  
 └── README.md                       # Project documentation  
 ```
 
